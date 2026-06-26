@@ -1,0 +1,15 @@
+.Title{
+  text-align: center;
+}
+.maincontainer{
+    width: 1024px;
+    height: auto;
+    margin: 0 auto;
+    border: 3px solid black;
+    margin-top: 10px;
+}
+.input{
+    width: 400px;
+    margin-left: 300px;
+    border-radius: 6px;
+}
