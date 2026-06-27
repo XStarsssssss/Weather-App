@@ -3,8 +3,12 @@ const https = require("https");
 
 const app = express();
 
+app.set("view engine", "ejs");
+
+app.use(express.static("public"));
+
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "/public"));
+
 
 
 app.get("/", (req, res) => {
@@ -29,10 +33,13 @@ app.post("/" , (req , res)=>{
             const description = weartherdata.weather[0].description;
             const icon = weartherdata.weather[0].icon;
             const img = `https://openweathermap.org/img/wn/${icon}@2x.png`
-            res.write(`<h1>City : <i>${city}<i/></h1>`);
-            res.write(`<h2>Temp : ${temp}</h2>`);
-            res.write(`<h2>Description : ${description}</h2>`);
-            res.write(`<h1><img src=${img}></h1>`);
+            
+           res.render("index", { 
+                city: city, 
+                temp: temp, 
+                desc: description,
+                img : img
+            });
         })
         
     });
