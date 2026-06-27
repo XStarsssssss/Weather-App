@@ -7,15 +7,44 @@
     <link rel="stylesheet" href="/style.css"> 
     <title>Weather Result</title>
 </head>
-<body>
-    <div class="container text-center mt-5">
-        <h1 class="display-4">မြို့အမည်: <%= city %></h1>
-        <h2 class="text-primary m-3">အပူချိန်: <%= temp %> °C</h2>
-        <h3>ရာသီဥတုအခြေအနေ: <%= desc %></h3>
-        <img src="<%= img %>">
+<body class="body">
+    <div class="container text-center mt-5 main-container">
+
+        <div class="search-container">
+      <div class="title-con">
+         <h1 class="Title">Weather App</h1>
+      </div>
+
+       <form method="post" action="/">
+
+         <div class="input-group mb-3 mt-4">
+                <input type="text" class="input" name="city_search" placeholder="City Name" required>
+                <button class="btn btn-info" type="submit">Search</button>
+         </div>
+
+        </form>
+
+        <hr class="hr" />
+
         
-        <br>
-        <a href="/" class="btn btn-secondary mt-3">ပြန်ရှာရန်</a>
+    </div>
+       <% if (typeof city !== 'undefined' && city !== null) { %>
+        <div class="s-container">
+            <div class="div-c">
+                <h1 class="city-name"><%= city %></h1>
+            </div>
+            <div class="div-t">
+                <h2 class="m-3 temp"><%= temp %> °C</h2>
+            </div>
+            <div class="div-desc">
+                <h3 class="desc"><%= desc %></h3>
+            </div>
+            <div class="div-img">
+                <img class="img" src="<%= img %>">
+            </div>
+        </div>
+        <% } %>
+       
     </div>
 </body>
 </html>

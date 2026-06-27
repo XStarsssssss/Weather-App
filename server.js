@@ -12,11 +12,11 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/index.html");
+    res.render(__dirname + "/views/index.ejs");
 });
 
 app.post("/" , (req , res)=>{
-    const Name = req.body.city;
+    const Name = req.body.city_search;
     const apikey = `84d70674016f7af4ac22e11031e53e09`
     const units = `metric`
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${Name}&appid=${apikey}&units=${units}`

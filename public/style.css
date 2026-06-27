@@ -1,15 +1,29 @@
 .Title{
   text-align: center;
+  color: aliceblue;
 }
-.maincontainer{
-    width: 1024px;
-    height: auto;
+.search-container{
     margin: 0 auto;
-    border: 3px solid black;
     margin-top: 10px;
 }
 .input{
-    width: 400px;
-    margin-left: 300px;
+    width: 350px;
+    margin-left: 320px;
     border-radius: 6px;
+}
+.body{
+    background-color: rgb(137, 136, 136);
+}
+.main-container{
+    border: 3px solid black;
+    width: 1024px;
+    margin: 0 auto;
+    background-color: rgb(106, 106, 106);
+    height: 500px;
+}
+.div-c{
+    margin: 30px;
+}
+.temp , .city-name , .desc{
+    color: rgb(255, 255, 255);
 }
