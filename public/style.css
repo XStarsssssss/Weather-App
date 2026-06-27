@@ -1,29 +1,57 @@
-.Title{
+.body {
+  background-color: rgb(137, 136, 136);
+}
+
+.Title {
   text-align: center;
   color: aliceblue;
 }
-.search-container{
+
+.main-container {
+  border: 3px solid black;
+  width: 100%;
+  max-width: 800px; 
+  margin: 50px auto; 
+  background-color: rgb(106, 106, 106);
+  min-height: 450px; 
+  padding: 30px; 
+  border-radius: 12px; 
+}
+
+
+.search-container form {
+  display: flex;
+  justify-content: center;
+}
+
+.search-container .input-group {
+  max-width: 450px; 
+}
+
+.input {
+  border-radius: 6px 0 0 6px; 
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  margin-left: 100px;
+}
+.btn_input{
     margin: 0 auto;
-    margin-top: 10px;
+    border: 3px solid red;
+    width: 100%;
 }
-.input{
-    width: 350px;
-    margin-left: 320px;
-    border-radius: 6px;
+
+.div-c {
+  margin: 20px;
 }
-.body{
-    background-color: rgb(137, 136, 136);
+
+.temp, .city-name, .desc {
+    color: aliceblue;
+    
 }
-.main-container{
-    border: 3px solid black;
-    width: 1024px;
-    margin: 0 auto;
-    background-color: rgb(106, 106, 106);
-    height: 500px;
-}
-.div-c{
-    margin: 30px;
-}
-.temp , .city-name , .desc{
-    color: rgb(255, 255, 255);
+
+
+.s-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
 }
