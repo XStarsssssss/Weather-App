@@ -1,10 +1,12 @@
 import express, { Request, Response } from "express";
+import path from "path";
 import axios from "axios";
 
 const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req: Request, res: Response) => {
