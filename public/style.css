@@ -1,57 +1,241 @@
-.body {
-  background-color: rgb(137, 136, 136);
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
 }
 
-.Title {
-  text-align: center;
-  color: aliceblue;
+body {
+background: linear-gradient(135deg, #1e3c72, #2a5298);
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
 }
 
-.main-container {
-  border: 3px solid black;
-  width: 100%;
-  max-width: 800px; 
-  margin: 50px auto; 
-  background-color: rgb(106, 106, 106);
-  min-height: 450px; 
-  padding: 30px; 
-  border-radius: 12px; 
+  
+.weather-card-container {
+width: 100%;
+max-width: 450px;
+padding: 20px;
+
 }
 
+  
 
-.search-container form {
-  display: flex;
-  justify-content: center;
+.glass-card {
+
+background: rgba(255, 255, 255, 0.1);
+
+backdrop-filter: blur(15px);
+
+-webkit-backdrop-filter: blur(15px);
+
+border: 1px solid rgba(255, 255, 255, 0.2);
+
+border-radius: 20px;
+
+padding: 30px;
+
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
 }
 
-.search-container .input-group {
-  max-width: 450px; 
+  
+
+.app-title {
+
+font-weight: 600;
+
+font-size: 2rem;
+
+text-align: center;
+
+margin-bottom: 5px;
+
 }
 
-.input {
-  border-radius: 6px 0 0 6px; 
-  border: 1px solid #ccc;
-  padding: 8px 12px;
-  margin-left: 100px;
-}
-.btn_input{
-    margin: 0 auto;
-    border: 3px solid red;
-    width: 100%;
-}
+  
 
-.div-c {
-  margin: 20px;
+.app-subtitle {
+
+font-size: 0.9rem;
+
+text-align: center;
+
+color: rgba(255, 255, 255, 0.7);
+
+margin-bottom: 25px;
+
 }
 
-.temp, .city-name, .desc {
-    color: aliceblue;
-    
+  
+
+.custom-input {
+
+background: rgba(255, 255, 255, 0.2) !important;
+
+border: 1px solid rgba(255, 255, 255, 0.3) !important;
+
+color: #fff !important;
+
+border-radius: 10px 0 0 10px !important;
+
+padding: 12px 15px;
+
 }
 
+  
 
-.s-container {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 8px;
+.custom-input::placeholder {
+
+color: rgba(255, 255, 255, 0.6);
+
+}
+
+  
+
+.custom-input:focus {
+
+background: rgba(255, 255, 255, 0.3) !important;
+
+box-shadow: none !important;
+
+border-color: #fff !important;
+
+}
+
+  
+
+.custom-btn {
+
+background: #ffffff;
+
+color: #1e3c72;
+
+font-weight: 600;
+
+border-radius: 0 10px 10px 0 !important;
+
+padding: 0 20px;
+
+transition: 0.3s;
+
+}
+
+  
+
+.custom-btn:hover {
+
+background: #e0e0e0;
+
+color: #0f1f3d;
+
+}
+
+  
+
+.weather-result {
+
+text-align: center;
+
+animation: fadeIn 0.5s ease-in-out;
+
+}
+
+  
+
+.city-name {
+
+font-size: 1.8rem;
+
+font-weight: 500;
+
+margin-bottom: 10px;
+
+}
+
+  
+
+.temp-section {
+
+display: flex;
+
+justify-content: center;
+
+align-items: flex-start;
+
+}
+
+  
+
+.temp-value {
+
+font-size: 4rem;
+
+font-weight: 600;
+
+line-height: 1;
+
+}
+
+  
+
+.temp-unit {
+
+font-size: 1.5rem;
+
+margin-left: 5px;
+
+}
+
+  
+
+.desc-text {
+
+font-size: 1.1rem;
+
+color: rgba(255, 255, 255, 0.85);
+
+margin-top: 5px;
+
+}
+
+  
+
+.weather-icon {
+
+width: 100px;
+
+height: 100px;
+
+filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+
+}
+
+  
+
+.alert-glass {
+
+background: rgba(255, 77, 77, 0.2) !important;
+
+border: 1px solid rgba(255, 77, 77, 0.4) !important;
+
+color: #ffcccc !important;
+
+border-radius: 10px;
+
+backdrop-filter: blur(10px);
+
+}
+
+  
+
+@keyframes fadeIn {
+
+from { opacity: 0; transform: translateY(10px); }
+
+to { opacity: 1; transform: translateY(0); }
+
 }
